@@ -1,0 +1,10 @@
+/* Home Page Styles */
+
+.home-page {
+    width: 100%;
+}
+
+/* Ensure smooth scrolling throughout the page */
+.home-page section {
+    scroll-margin-top: var(--navbar-height);
+}

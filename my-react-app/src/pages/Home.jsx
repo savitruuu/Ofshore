@@ -1,34 +1,27 @@
-import { useState } from 'react';
+import HeroStrip from '../components/homepage/HeroStrip';
+import TopCreatorsSection from '../components/homepage/TopCreatorsSection';
+import TopCategoriesSection from '../components/homepage/TopCategoriesSection';
+import TrendingSection from '../components/homepage/TrendingSection';
+import ForCreatorsSection from '../components/homepage/ForCreatorsSection';
+import './Home.css';
 
 function Home() {
-    // Simple state management example with useState hook
-    const [count, setCount] = useState(0);
-
-    const handleIncrement = () => {
-        setCount(count + 1);
-    };
-
-    const handleReset = () => {
-        setCount(0);
-    };
-
     return (
-        <div className="page">
-            <h1>Welcome to My React App</h1>
-            <p>This is a basic React application skeleton built with Vite and React Router.</p>
+        <div className="home-page">
+            {/* Hero strip with main value proposition */}
+            <HeroStrip />
 
-            <div className="counter-section">
-                <h2>Simple Counter Example</h2>
-                <p className="counter-display">Count: <strong>{count}</strong></p>
-                <div className="button-group">
-                    <button onClick={handleIncrement} className="btn btn-primary">
-                        Increment
-                    </button>
-                    <button onClick={handleReset} className="btn btn-secondary">
-                        Reset
-                    </button>
-                </div>
-            </div>
+            {/* Top creators horizontal scroll section */}
+            <TopCreatorsSection />
+
+            {/* Category browsing section */}
+            <TopCategoriesSection />
+
+            {/* Trending products grid */}
+            <TrendingSection />
+
+            {/* For creators value props and CTA */}
+            <ForCreatorsSection />
         </div>
     );
 }

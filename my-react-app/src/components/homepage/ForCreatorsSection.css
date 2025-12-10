@@ -1,0 +1,89 @@
+/* For Creators Section Styles */
+
+.for-creators-section {
+    background-color: var(--bg-secondary);
+}
+
+.value-props-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-2xl);
+}
+
+/* Value Prop Card */
+.value-prop-card {
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    text-align: center;
+    transition: all var(--transition-normal);
+}
+
+.value-prop-card:hover {
+    border-color: var(--accent-primary);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.value-prop-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+    display: block;
+}
+
+.value-prop-title {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.value-prop-description {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* CTA */
+.for-creators-cta {
+    text-align: center;
+}
+
+.btn-large {
+    padding: 1rem 3rem;
+    font-size: var(--font-size-lg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .value-props-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .value-prop-card {
+        padding: var(--spacing-lg);
+    }
+
+    .btn-large {
+        width: 100%;
+        padding: 0.875rem 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .value-prop-icon {
+        font-size: 2.5rem;
+    }
+
+    .value-prop-title {
+        font-size: var(--font-size-base);
+    }
+
+    .btn-large {
+        font-size: var(--font-size-base);
+    }
+}
